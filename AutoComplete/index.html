@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Autocomplete Dropdown with Review Box and Button</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Autocomplete Dropdown Example</h2>
+
+  <div class="autocomplete-container">
+    <!-- Search Input + Dropdown Button -->
+    <div class="input-group">
+      <input type="text" id="searchInput" placeholder="Start typing...">
+      <button id="dropdownButton">&#9660;</button>
+    </div>
+
+    <div id="suggestions" class="suggestions"></div>
+  </div>
+
+  <!-- Review box for selected items -->
+  <div class="review-container">
+    <h3>Selected Items</h3>
+    <ul id="selectedItems"></ul>
+    <button id="submitButton">Submit & Download</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

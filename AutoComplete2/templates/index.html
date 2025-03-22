@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Autocomplete Dropdown with Review Box</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <h2>Autocomplete Dropdown Example</h2>
+
+  <div class="form-container">
+
+    <!-- UserID Field -->
+    <label for="userId">User ID:</label>
+    <input type="text" id="userId" placeholder="Enter User ID">
+
+    <!-- Email Field -->
+    <label for="emailSelect">Email Domain:</label>
+    <div class="input-group">
+       <input type="text" id="emailInput" placeholder="Enter email name"> 
+      <select id="emailSelect">
+        <option value="@gmail.com">@gmail.com</option>
+        <option value="@outlook.com">@outlook.com</option>
+      </select>
+    </div>
+
+    <!-- Autocomplete Field -->
+    <label for="searchInput">Role:</label>
+    <div class="autocomplete-container">
+      <div class="input-group">
+        <input type="text" id="searchInput" placeholder="Start typing...">
+        <button id="dropdownButton">&#9660;</button>
+      </div>
+      <div id="suggestions" class="suggestions"></div>
+    </div>
+
+    <!-- Review Box -->
+    <div class="review-container">
+      <h3>Selected Items</h3>
+      <ul id="selectedItems"></ul>
+      <button id="submitButton">Submit</button>
+    </div>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
